@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <title>Complex Studio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -6,122 +7,266 @@
     <link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
     <script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
     <script src="//cdnjs.loli.net/ajax/libs/smoothscroll/1.4.9/SmoothScroll.min.js"></script>
-	<script src="//cdnjs.loli.net/ajax/libs/iamdustan-smoothscroll/0.4.0/smoothscroll.min.js"></script>
-    
+    <script src="//cdnjs.loli.net/ajax/libs/iamdustan-smoothscroll/0.4.0/smoothscroll.min.js"></script>
+    <script>
+        var $$ = mdui.JQ;
+        $$(window).on("scroll", function () {
+            $$(".full-page").css("background-position-y", (-document.documentElement.scrollTop / 2).toString() + "px")
+        });
+    </script>
     <style>
-        *{
+        * {
             padding: 0;
             margin: 0;
         }
-        body{
-            height: 100vh;
-        }
-        .full-page{
+
+        .full-page {
             display: block;
             width: 100%;
-            background-position: right;
+            min-height: 100vh;
+        }
+
+        .first-cover {
+            background-position-x: right;
             background-size: cover;
-            height: 100%;
+            background-repeat: no-repeat;
             background-image: url(static/img/background.jpg);
             background-attachment: fixed;
         }
-        .full-cover{
-            background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.15));
+
+        .full-cover {
+            background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .15));
             position: absolute;
             width: 100%;
             height: 100%;
         }
-        .cover-header{
+
+        .cover-header {
             max-width: 1000px;
         }
-        .header-name{
+
+        .header-name {
             font-weight: 100;
+            text-shadow: 0px 0px 10px black;
         }
-        .header-btn{
+
+        .header-btn {
             width: 180px;
             height: 70px;
             font-size: 1.2em;
         }
-        .header-btn-1{
+
+        .header-btn-1 {
             border: rgba(255, 255, 255, 0.7) 2px solid;
         }
-        .header-desc{
+
+        .header-desc {
             line-height: 1.5;
         }
-        .cover-footer{
+
+        .cover-footer {
             position: absolute;
             bottom: 15px;
             width: 100%;
         }
-        .go-down-btn{
+
+        .go-down-btn {
             text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
             animation: tipsdown 1.7s ease-in-out infinite;
         }
-        ::-webkit-scrollbar{
-            width: 8px;
-            background-color: rgba(0,0,0,.25);
+
+        .item-image {
+            min-height: 150px;
+            height: 27vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
-        ::-webkit-scrollbar-thumb{
-            background-color: rgba(68, 138, 255,0.8);
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            background-color: rgba(0, 0, 0, .25);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(68, 138, 255, 0.8);
             border-radius: 10px;
         }
+
         @keyframes tipsdown {
             0% {
                 margin-bottom: 0px;
             }
+
             50% {
                 margin-bottom: 10px;
             }
-        
+
             100% {
                 margin-bottom: 0px;
             }
-}
-        @media all and (min-width: 535px){
-            .cover-header{
+        }
+
+        @media all and (min-width: 535px) {
+            .cover-header {
                 margin-left: 70px;
                 margin-right: 70px;
             }
         }
-        @media screen and (max-width: 535px){
-            .cover-header{
+
+        @media screen and (max-width: 535px) {
+            .cover-header {
                 margin-left: auto;
                 margin-right: auto;
                 padding-right: 8px;
                 text-align: center;
             }
-            .header-name{
-                font-size: 6em;
+
+            .header-name {
+                font-size: 5em;
             }
-            .header-desc{
+
+            .header-desc {
                 font-size: 1.3em;
             }
-            .header-btn{
+
+            .header-btn {
                 width: 7.5em;
                 height: 3em;
             }
         }
     </style>
 </head>
+
 <body class="mdui-theme-primary-blue mdui-theme-accent-blue">
     <!-- 首页全屏图片 -->
-    <div class="full-page">
+    <div class="full-page first-cover">
         <div class="full-cover mdui-valign">
             <div class="cover-header">
                 <div class="header-name mdui-text-color-white mdui-typo-display-4">Complex Studio</div>
-                <div class="header-desc mdui-text-color-white mdui-typo-headline mdui-m-t-3 mdui-m-l-1">致力于国内优质的服务端的制作技术讨论小组</div>
+                <div class="header-desc mdui-text-color-white mdui-typo-headline-opacity mdui-m-t-3 mdui-m-l-1">
+                    致力于国内优质的服务端的制作技术讨论小组</div>
                 <div class="nav-button-group mdui-m-t-3 mdui-m-l-1">
-                    <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-text-color-white mdui-color-theme-accent header-btn">了解更多</button>
-                    <button class="mdui-btn mdui-btn-raised mdui-text-color-white mdui-ripple mdui-ripple-blue header-btn header-btn-1 mdui-m-l-3">加入我们</button>
+                    <button
+                            class="mdui-btn mdui-btn-raised mdui-ripple mdui-text-color-white mdui-color-theme-accent header-btn">了解更多</button>
+                    <button
+                            class="mdui-btn mdui-btn-raised mdui-text-color-white mdui-ripple mdui-ripple-white header-btn header-btn-1 mdui-m-l-3">加入我们</button>
                 </div>
             </div>
         </div>
         <div class="cover-footer">
-            <button onclick="document.querySelector('#next').scrollIntoView({ behavior: 'smooth' });" class="go-down-btn mdui-btn mdui-btn-icon mdui-text-color-white mdui-ripple mdui-center"><i class="mdui-icon material-icons">keyboard_arrow_down</i></button>
+            <button onclick="document.querySelector('#next').scrollIntoView({ behavior: 'smooth' });"
+                    class="go-down-btn mdui-btn mdui-btn-icon mdui-text-color-white mdui-ripple mdui-center"><i
+                   class="mdui-icon material-icons">keyboard_arrow_down</i></button>
         </div>
     </div>
     <!-- 底部展示内容 -->
-    <div>
-        <a id="next"></a>
+    <div class="full-page">
+        <div class="mdui-container mdui-p-a-5">
+            <a id="next"></a>
+            <div class="mdui-typo-display-1 mdui-text-center mdui-p-b-1">我 们 的 作 品</div>
+            <div class="mdui-typo-subheading-opacity mdui-text-center mdui-p-b-3">我们期待你为Complex Studio书写更多的辉煌</div>
+
+            <div class="mdui-row">
+                <div class="mdui-p-a-1 mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-4">
+                    <div class="mdui-card">
+                        <div class="mdui-card-media">
+                            <div class="item-image"
+                                 style="background-size: contain;
+                                 background-image:url(https://proxy.spigotmc.org/937d74812c248d6dad51ac888c84c1e7bede35bd?url=http%3A%2F%2Fi.imgur.com%2FNGorhuC.png)">
+                            </div>
+                            <div class="mdui-card-primary">
+                                <div class="mdui-card-primary-title mdui-text-truncate">DeluxeMenus Wiki 翻译</div>
+                                <div class="mdui-card-primary-subtitle">[翻译] AzureHanChen</div>
+                            </div>
+                        </div>
+                        <div class="mdui-card-actions">
+                            <button class="mdui-btn mdui-ripple">前往查看</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdui-p-a-1 mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-4">
+                    <div class="mdui-card">
+                        <div class="mdui-card-media">
+                            <div class="item-image"
+                                 style="background-image:url(https://attachment.mcbbs.net/forum/201905/09/181643m5ymmomqmg053vry.jpg)">
+                            </div>
+                            <div class="mdui-card-primary">
+                                <div class="mdui-card-primary-title mdui-text-truncate">MysteriousStrengthen</div>
+                                <div class="mdui-card-primary-subtitle">[原创插件] 无邪</div>
+                            </div>
+                        </div>
+                        <div class="mdui-card-actions">
+                            <button class="mdui-btn mdui-ripple">前往查看</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdui-p-a-1 mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-4 mdui-hidden-xs">
+                    <div class="mdui-card">
+                        <div class="mdui-card-media">
+                            <div class="item-image"
+                                 style="background-image:url(https://upload.cc/i1/2019/12/15/jN3nQL.png)">
+                            </div>
+                            <div class="mdui-card-primary">
+                                <div class="mdui-card-primary-title mdui-text-truncate">天际</div>
+                                <div class="mdui-card-primary-subtitle">[服务端] 回忆与幻想</div>
+                            </div>
+                        </div>
+                        <div class="mdui-card-actions">
+                            <button class="mdui-btn mdui-ripple">前往查看</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdui-p-a-1 mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-4 mdui-hidden-sm-down">
+                    <div class="mdui-card">
+                        <div class="mdui-card-media">
+                            <div class="item-image"
+                                 style="background-image:url(https://attachment.mcbbs.net/forum/201912/14/031645t9y63jkr0jjp59ro.jpg)">
+                            </div>
+                            <div class="mdui-card-primary">
+                                <div class="mdui-card-primary-title mdui-text-truncate">怪物属性 Mob Properties 教程</div>
+                                <div class="mdui-card-primary-subtitle">[教程] Soil Sword</div>
+                            </div>
+                        </div>
+                        <div class="mdui-card-actions">
+                            <button class="mdui-btn mdui-ripple">前往查看</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdui-p-a-1 mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-4 mdui-hidden-sm-down">
+                    <div class="mdui-card">
+                        <div class="mdui-card-media">
+                            <div class="item-image"
+                                 style="background-image:url(https://attachment.mcbbs.net/forum/201908/16/025604j71ba2ea7vmvfqey.jpg)">
+                            </div>
+                            <div class="mdui-card-primary">
+                                <div class="mdui-card-primary-title mdui-text-truncate">小园香径独徘徊</div>
+                                <div class="mdui-card-primary-subtitle">[地图作品] 喵哒子</div>
+                            </div>
+                        </div>
+                        <div class="mdui-card-actions">
+                            <button class="mdui-btn mdui-ripple">前往查看</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdui-p-a-1 mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-4">
+                    <div class="mdui-card">
+                        <div class="mdui-card-media">
+                            <div class="item-image"
+                                 style="filter: blur(20px);background-image:url(https://proxy.spigotmc.org/937d74812c248d6dad51ac888c84c1e7bede35bd?url=http%3A%2F%2Fi.imgur.com%2FNGorhuC.png)">
+                            </div>
+                            <div class="mdui-card-primary">
+                                <div class="mdui-card-primary-title mdui-text-truncate">以及更多</div>
+                                <div class="mdui-card-primary-subtitle">Complex Studio</div>
+                            </div>
+                        </div>
+                        <div class="mdui-card-actions">
+                            <button class="mdui-btn mdui-ripple">前往查看</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 </body>
