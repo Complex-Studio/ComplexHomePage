@@ -144,6 +144,7 @@
         }
         .item-icon{
             height: 27vh;
+            user-select: none;
         }
     </style>
 </head>
@@ -203,7 +204,7 @@
                                  style="background-image:url(https://attachment.mcbbs.net/forum/201905/09/181643m5ymmomqmg053vry.jpg)">
                             </div>
                             <div class="mdui-card-primary">
-                                <div class="mdui-card-primary-title mdui-text-truncate">MysteriousStrengthen</div>
+                                <div class="mdui-card-primary-title mdui-text-truncate">Mysterious Strengthen</div>
                                 <div class="mdui-card-primary-subtitle">[原创插件] 无邪</div>
                             </div>
                         </div>
@@ -268,11 +269,11 @@
                             </div>
                             <div class="mdui-card-primary">
                                 <div class="mdui-card-primary-title mdui-text-truncate">以及更多</div>
-                                <div class="mdui-card-primary-subtitle">Complex Studio</div>
+                                <div class="mdui-card-primary-subtitle">与我们一同书写未来</div>
                             </div>
                         </div>
                         <div class="mdui-card-actions">
-                            <button class="mdui-btn mdui-ripple">前往查看</button>
+                            <button class="mdui-btn mdui-ripple" onclick="document.querySelector('#join-us').scrollIntoView({ behavior: 'smooth' });">加入我们</button>
                         </div>
                     </div>
                 </div>
@@ -285,54 +286,67 @@
         <div class="mdui-typo-subheading-opacity mdui-text-center mdui-p-b-3">加入CPS,让你的才华大放光彩</div>
         <div class='mdui-container mdui-p-b-5'>
             <div class="mdui-row">
-                <div class="mdui-p-a-1 mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-4">
+                <div class="mdui-p-a-1 mdui-col-xs-12 mdui-col-sm-4 mdui-col-md-4">
                     <div class="mdui-card">
                         <div class="mdui-card-media job-icon">
-                            <div class="mdui-text-color-theme-accent mdui-text-center mdui-p-a-5 item-icon mdui-valign">
+                            <div class="mdui-text-color-theme-accent mdui-text-center mdui-p-a-1 item-icon mdui-valign">
                                 <i style="font-size: 10em"  class="mdui-icon material-icons mdui-center">&#xe875;</i>
                             </div>
                             <div class="mdui-card-primary">
                                 <div class="mdui-card-primary-title mdui-text-truncate">联机分组</div>
-                                <div class="mdui-card-primary-subtitle">原创插件开发/插件搬运/服务端制作</div>
+                                <div class="mdui-card-primary-subtitle mdui-text-truncate">原创插件开发/插件搬运/服务端制作</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="mdui-p-a-1 mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-4">
+                <div class="mdui-p-a-1 mdui-col-xs-12 mdui-col-sm-4 mdui-col-md-4">
                     <div class="mdui-card">
                         <div class="mdui-card-media job-icon">
-                            <div class="mdui-text-color-theme-accent mdui-text-center mdui-p-a-5 item-icon mdui-valign">
+                            <div class="mdui-text-color-theme-accent mdui-text-center mdui-p-a-1 item-icon mdui-valign">
                                 <i style="font-size: 10em"  class="mdui-icon material-icons mdui-center">&#xe87b;</i>
                             </div>
                             <div class="mdui-card-primary">
                                 <div class="mdui-card-primary-title mdui-text-truncate">MOD分组</div>
-                                <div class="mdui-card-primary-subtitle">原创MOD开发/MOD搬运/整合包制作</div>
+                                <div class="mdui-card-primary-subtitle mdui-text-truncate">原创MOD开发/MOD搬运/整合包制作</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="mdui-p-a-1 mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-4">
+                <div class="mdui-p-a-1 mdui-col-xs-12 mdui-col-sm-4 mdui-col-md-4">
                     <div class="mdui-card">
                         <div class="mdui-card-media job-icon">
-                            <div class="mdui-text-color-theme-accent mdui-text-center mdui-p-a-5 item-icon mdui-valign">
+                            <div class="mdui-text-color-theme-accent mdui-text-center mdui-p-a-1 item-icon mdui-valign">
                                 <i style="font-size: 10em" class="mdui-icon material-icons mdui-center">&#xe55b;</i>
                             </div>
                             <div class="mdui-card-primary">
                                 <div class="mdui-card-primary-title mdui-text-truncate">地图分组</div>
-                                <div class="mdui-card-primary-subtitle">地图制作/搬运</div>
+                                <div class="mdui-card-primary-subtitle mdui-text-truncate">地图制作/搬运</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="mdui-p-a-1 mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-12">
+                <div class="mdui-p-a-1 mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-6">
                     <div class="mdui-card">
                         <div class="mdui-card-media job-icon">
-                            <div class="mdui-text-color-theme-accent mdui-text-center mdui-p-a-5 item-icon mdui-valign">
+                            <div class="mdui-text-color-theme-accent mdui-text-center mdui-p-a-1 item-icon mdui-valign">
                                 <i style="font-size: 10em" class="mdui-icon material-icons mdui-center">&#xe871;</i>
                             </div>
                             <div class="mdui-card-primary">
                                 <div class="mdui-card-primary-title mdui-text-truncate">综合分组</div>
-                                <div class="mdui-card-primary-subtitle">Wiki翻译/插件汉化/摸鱼</div>
+                                <div class="mdui-card-primary-subtitle mdui-text-truncate">Wiki翻译/插件汉化/摸鱼</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdui-p-a-1 mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-6">
+                    <div class="mdui-card mdui-color-theme-accent mdui-ripple">
+                        <div class="mdui-card-media job-icon">
+                            <div class="mdui-text-center mdui-p-a-1 item-icon mdui-valign">
+                                <i style="margin-top:32px; font-size: 10em" class="mdui-icon material-icons mdui-center">&#xe5c8;</i>
+                            </div>
+                            <div class="mdui-card-primary">
+                                <div class="mdui-card-primary-title mdui-text-truncate">加入指南</div>
+                                <div class="mdui-card-primary-subtitle">立即阅读加入指南</div>
                             </div>
                         </div>
                     </div>
