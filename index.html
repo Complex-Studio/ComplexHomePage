@@ -11,7 +11,7 @@
     <script>
         var $$ = mdui.JQ;
         $$(window).on("scroll", function () {
-            $$(".full-page").css("background-position-y", (-document.documentElement.scrollTop / 2).toString() + "px")
+            $$(".first-cover").css("background-position-y", (-document.documentElement.scrollTop / 2).toString() + "px")
         });
     </script>
     <style>
@@ -135,6 +135,16 @@
                 height: 3em;
             }
         }
+        .join-us{
+            background-color: rgba(0, 0, 0, .01);
+            box-shadow: inset 0px 0px 20px #00000040;
+        }
+        .footer{
+            box-shadow: inset 0px 10px 20px 0px #00000040;height: 200px;background: #444;
+        }
+        .item-icon{
+            height: 27vh;
+        }
     </style>
 </head>
 
@@ -148,8 +158,10 @@
                     致力于国内优质的服务端的制作技术讨论小组</div>
                 <div class="nav-button-group mdui-m-t-3 mdui-m-l-1">
                     <button
+                    onclick="document.querySelector('#next').scrollIntoView({ behavior: 'smooth' });"
                             class="mdui-btn mdui-btn-raised mdui-ripple mdui-text-color-white mdui-color-theme-accent header-btn">了解更多</button>
                     <button
+                    onclick="document.querySelector('#join-us').scrollIntoView({ behavior: 'smooth' });"
                             class="mdui-btn mdui-btn-raised mdui-text-color-white mdui-ripple mdui-ripple-white header-btn header-btn-1 mdui-m-l-3">加入我们</button>
                 </div>
             </div>
@@ -162,11 +174,10 @@
     </div>
     <!-- 底部展示内容 -->
     <div class="full-page">
-        <div class="mdui-container mdui-p-a-5">
+        <div class="mdui-container mdui-p-b-5">
             <a id="next"></a>
-            <div class="mdui-typo-display-1 mdui-text-center mdui-p-b-1">我 们 的 作 品</div>
+            <div class="mdui-typo-display-1 mdui-text-center mdui-p-b-1 mdui-p-t-4">我 们 的 作 品</div>
             <div class="mdui-typo-subheading-opacity mdui-text-center mdui-p-b-3">我们期待你为Complex Studio书写更多的辉煌</div>
-
             <div class="mdui-row">
                 <div class="mdui-p-a-1 mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-4">
                     <div class="mdui-card">
@@ -266,7 +277,70 @@
                     </div>
                 </div>
             </div>
-
         </div>
+    </div>
+    <div class="full-page join-us">
+        <a id="join-us"></a>
+        <div class="mdui-typo-display-1 mdui-text-center mdui-p-t-4 mdui-p-b-1">加 入 我 们</div>
+        <div class="mdui-typo-subheading-opacity mdui-text-center mdui-p-b-3">加入CPS,让你的才华大放光彩</div>
+        <div class='mdui-container mdui-p-b-5'>
+            <div class="mdui-row">
+                <div class="mdui-p-a-1 mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-4">
+                    <div class="mdui-card">
+                        <div class="mdui-card-media job-icon">
+                            <div class="mdui-text-color-theme-accent mdui-text-center mdui-p-a-5 item-icon mdui-valign">
+                                <i style="font-size: 10em"  class="mdui-icon material-icons mdui-center">&#xe875;</i>
+                            </div>
+                            <div class="mdui-card-primary">
+                                <div class="mdui-card-primary-title mdui-text-truncate">联机分组</div>
+                                <div class="mdui-card-primary-subtitle">原创插件开发/插件搬运/服务端制作</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdui-p-a-1 mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-4">
+                    <div class="mdui-card">
+                        <div class="mdui-card-media job-icon">
+                            <div class="mdui-text-color-theme-accent mdui-text-center mdui-p-a-5 item-icon mdui-valign">
+                                <i style="font-size: 10em"  class="mdui-icon material-icons mdui-center">&#xe87b;</i>
+                            </div>
+                            <div class="mdui-card-primary">
+                                <div class="mdui-card-primary-title mdui-text-truncate">MOD分组</div>
+                                <div class="mdui-card-primary-subtitle">原创MOD开发/MOD搬运/整合包制作</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdui-p-a-1 mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-4">
+                    <div class="mdui-card">
+                        <div class="mdui-card-media job-icon">
+                            <div class="mdui-text-color-theme-accent mdui-text-center mdui-p-a-5 item-icon mdui-valign">
+                                <i style="font-size: 10em" class="mdui-icon material-icons mdui-center">&#xe55b;</i>
+                            </div>
+                            <div class="mdui-card-primary">
+                                <div class="mdui-card-primary-title mdui-text-truncate">地图分组</div>
+                                <div class="mdui-card-primary-subtitle">地图制作/搬运</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdui-p-a-1 mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-12">
+                    <div class="mdui-card">
+                        <div class="mdui-card-media job-icon">
+                            <div class="mdui-text-color-theme-accent mdui-text-center mdui-p-a-5 item-icon mdui-valign">
+                                <i style="font-size: 10em" class="mdui-icon material-icons mdui-center">&#xe871;</i>
+                            </div>
+                            <div class="mdui-card-primary">
+                                <div class="mdui-card-primary-title mdui-text-truncate">综合分组</div>
+                                <div class="mdui-card-primary-subtitle">Wiki翻译/插件汉化/摸鱼</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+
     </div>
 </body>
