@@ -3,7 +3,7 @@
 <head>
     <title>Complex Studio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
     <script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
     <script src="//cdnjs.loli.net/ajax/libs/smoothscroll/1.4.9/SmoothScroll.min.js"></script>
@@ -140,7 +140,7 @@
             box-shadow: inset 0px 0px 20px #00000040;
         }
         .footer{
-            box-shadow: inset 0px 10px 20px 0px #00000040;height: 200px;background: #444;
+            box-shadow: inset 0px 10px 20px 0px #00000040;min-height: 200px;background: #444;
         }
         .item-icon{
             height: 27vh;
@@ -355,6 +355,21 @@
         </div>
     </div>
     <div class="footer">
-
+        <div class="mdui-container">
+            <div class="mdui-rows mdui-p-y-3">
+                <div class="mdui-col-xs-12 mdui-col-sm-4 mdui-col-md-4">
+                    <div style="background-image: url(static/img/logo.png);background-position: center;height: 135px;background-size: contain;background-repeat: no-repeat;"></div>
+                    <p class="mdui-typo-headline mdui-text-color-white mdui-text-center mdui-p-y-1">Complex Studio</p>
+                </div>
+                <div class="mdui-col-xs-12 mdui-col-sm-4 mdui-col-md-4 mdui-typo mdui-text-center">
+                    <div class="mdui-typo-headline mdui-text-color-white">联系我们</div>
+                    <p><a href='#'>外围交流群</a><br><a href='#'>小组招新群</a></p>
+                </div>
+                <div class="mdui-col-xs-12 mdui-col-sm-4 mdui-col-md-4 mdui-typo mdui-text-center">
+                    <div class="mdui-typo-headline mdui-text-color-white">友情链接</div>
+                    <p><a href=''>MCBBS</a></p>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
