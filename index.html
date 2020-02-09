@@ -141,6 +141,13 @@
             user-select: none;
         }
     </style>
+    <script>
+        var $$ = mdui.JQ;
+        function alinkclick(url){
+            $$('<a href="'+url+'"></a>').trigger("click");
+        }
+        $$(function(){$$(".mdui-card.mdui-hoverable[link]").on("click",function(){alinkclick($$(this).attr('link'));});});
+    </script>
 </head>
 
 <body class="mdui-theme-primary-blue mdui-theme-accent-blue">
@@ -175,7 +182,7 @@
             <div class="mdui-typo-subheading-opacity mdui-text-center mdui-p-b-3">我们期待你为Complex Studio书写更多的辉煌</div>
             <div class="mdui-row">
                 <div class="mdui-p-a-1 mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-4">
-                    <div class="mdui-card mdui-hoverable">
+                    <div link="#" class="mdui-card mdui-ripple mdui-hoverable">
                         <div class="mdui-card-media">
                             <div class="item-image"
                                  style="background-size: contain;
@@ -186,13 +193,10 @@
                                 <div class="mdui-card-primary-subtitle">[翻译] AzureHanChen</div>
                             </div>
                         </div>
-                        <div class="mdui-card-actions">
-                            <button class="mdui-btn mdui-ripple">前往查看</button>
-                        </div>
                     </div>
                 </div>
                 <div class="mdui-p-a-1 mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-4">
-                    <div class="mdui-card mdui-hoverable">
+                    <div link="#" class="mdui-card mdui-ripple mdui-hoverable">
                         <div class="mdui-card-media">
                             <div class="item-image"
                                  style="background-image:url(https://attachment.mcbbs.net/forum/201905/09/181643m5ymmomqmg053vry.jpg)">
@@ -202,13 +206,10 @@
                                 <div class="mdui-card-primary-subtitle">[原创插件] 无邪</div>
                             </div>
                         </div>
-                        <div class="mdui-card-actions">
-                            <button class="mdui-btn mdui-ripple">前往查看</button>
-                        </div>
                     </div>
                 </div>
                 <div class="mdui-p-a-1 mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-4 mdui-hidden-xs">
-                    <div class="mdui-card mdui-hoverable">
+                    <div link="#" class="mdui-card mdui-ripple mdui-hoverable">
                         <div class="mdui-card-media">
                             <div class="item-image"
                                  style="background-image:url(https://upload.cc/i1/2019/12/15/jN3nQL.png)">
@@ -218,13 +219,10 @@
                                 <div class="mdui-card-primary-subtitle">[服务端] 回忆与幻想</div>
                             </div>
                         </div>
-                        <div class="mdui-card-actions">
-                            <button class="mdui-btn mdui-ripple">前往查看</button>
-                        </div>
                     </div>
                 </div>
                 <div class="mdui-p-a-1 mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-4 mdui-hidden-sm-down">
-                    <div class="mdui-card mdui-hoverable">
+                    <div link="#" class="mdui-card mdui-ripple mdui-hoverable">
                         <div class="mdui-card-media">
                             <div class="item-image"
                                  style="background-image:url(https://attachment.mcbbs.net/forum/202002/06/031127f70kx1kcccuuf799.png)">
@@ -234,13 +232,10 @@
                                 <div class="mdui-card-primary-subtitle">[教程] Soil Sword</div>
                             </div>
                         </div>
-                        <div class="mdui-card-actions">
-                            <button class="mdui-btn mdui-ripple">前往查看</button>
-                        </div>
                     </div>
                 </div>
                 <div class="mdui-p-a-1 mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-4 mdui-hidden-sm-down">
-                    <div class="mdui-card mdui-hoverable">
+                    <div link="#" class="mdui-card mdui-ripple mdui-hoverable">
                         <div class="mdui-card-media">
                             <div class="item-image"
                                  style="background-image:url(https://attachment.mcbbs.net/forum/201908/16/025604j71ba2ea7vmvfqey.jpg)">
@@ -250,13 +245,10 @@
                                 <div class="mdui-card-primary-subtitle">[地图作品] 喵哒子</div>
                             </div>
                         </div>
-                        <div class="mdui-card-actions">
-                            <button class="mdui-btn mdui-ripple">前往查看</button>
-                        </div>
                     </div>
                 </div>
                 <div class="mdui-p-a-1 mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-4">
-                    <div class="mdui-card mdui-hoverable">
+                    <div link="#" class="mdui-card mdui-ripple mdui-hoverable">
                         <div class="mdui-card-media">
                             <div class="item-image"
                                  style="filter: blur(20px);background-image:url(https://proxy.spigotmc.org/937d74812c248d6dad51ac888c84c1e7bede35bd?url=http%3A%2F%2Fi.imgur.com%2FNGorhuC.png)">
@@ -265,9 +257,6 @@
                                 <div class="mdui-card-primary-title mdui-text-truncate">以及更多</div>
                                 <div class="mdui-card-primary-subtitle">与我们一同书写未来</div>
                             </div>
-                        </div>
-                        <div class="mdui-card-actions">
-                            <button class="mdui-btn mdui-ripple" onclick="document.querySelector('#join-us').scrollIntoView({ behavior: 'smooth' });">加入我们</button>
                         </div>
                     </div>
                 </div>
